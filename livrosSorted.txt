@@ -1,0 +1,6 @@
+2023,260,Livro 6,Suspense,Autor 6,36.750000,1
+783368690,180,Livro 3,Misterio,Autor 3,27.500000,1
+1025202362,200,Livro 1,Ficcao,Autor 1,29.990000,1
+1102520059,300,Livro 4,Fantasia,Autor 4,39.990002,1
+1350490027,250,Livro 2,Aventura,Autor 2,34.990002,1
+2044897763,220,Livro 5,Romance,Autor 5,31.500000,1
