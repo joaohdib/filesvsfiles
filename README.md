@@ -43,13 +43,13 @@ Books are created with the following attributes:
 - **Active status (1 = active, 0 = deleted)**
 
 Example function for book creation:
->>>
+```
 void create_fileTxt(char *filename) {
     FILE *arq;
     arq = fopen(filename, "w");
     fclose(arq);
 }
->>>
+```
 
 ---
 
@@ -57,7 +57,7 @@ void create_fileTxt(char *filename) {
 The program supports listing books stored in different formats:
 
 Example listing function for text files:
->>>
+```
 void listTxt(char *filename, int size) {
     FILE *arq = fopen(filename, "r");
     if (!arq) {
@@ -74,13 +74,13 @@ void listTxt(char *filename, int size) {
     }
     fclose(arq);
 }
->>>
+```
 
 ---
 
 ### **3️⃣ Reading a Specific Book**
 To retrieve a book by ID:
->>>
+```
 void readTxt(char *filename, int id, int size) {
     FILE *arq = fopen(filename, "r");
     if (!arq) {
@@ -99,7 +99,7 @@ void readTxt(char *filename, int id, int size) {
     printf("Book not found!\\n");
     fclose(arq);
 }
->>>
+```
 
 ---
 
@@ -107,7 +107,7 @@ void readTxt(char *filename, int id, int size) {
 Updating a book modifies its information while keeping its original ID.
 
 Example:
->>>
+```
 void updateTxt(char *filename, Book updatedBook, int size) {
     FILE *arq = fopen(filename, "r+");
     if (!arq) {
@@ -128,7 +128,7 @@ void updateTxt(char *filename, Book updatedBook, int size) {
     printf("Book not found!\\n");
     fclose(arq);
 }
->>>
+```
 
 ---
 
@@ -136,7 +136,7 @@ void updateTxt(char *filename, Book updatedBook, int size) {
 Instead of removing a book from the file, it is marked as inactive (`active = 0`).
 
 Example:
->>>
+```
 void deleteTxt(char *filename, int id, int size) {
     FILE *arq = fopen(filename, "r+");
     if (!arq) {
@@ -158,7 +158,7 @@ void deleteTxt(char *filename, int id, int size) {
     printf("Book not found!\\n");
     fclose(arq);
 }
->>>
+```
 
 ---
 
@@ -172,7 +172,7 @@ The program compares execution times for different storage methods:
 - **Heap Binary Files**
 
 Example performance measurement:
->>>
+```
 clock_t start, end;
 double executionTime;
 
@@ -182,7 +182,7 @@ end = clock();
 
 executionTime = (double)(end - start) / CLOCKS_PER_SEC;
 printf("Execution Time: %f seconds\\n", executionTime);
->>>
+```
 
 ---
 
